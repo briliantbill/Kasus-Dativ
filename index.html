@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wer? Wen? Wem?</title>
+  <meta name="description" content="Belajar Nominativ, Akkusativ, dan Dativ (bahasa Jerman A1) dengan tabel interaktif, audio, dan latihan.">
+  <meta name="theme-color" content="#F08A24">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23F08A24'/%3E%3Ctext x='32' y='44' font-size='30' text-anchor='middle' font-family='Arial' font-weight='700' fill='%231F2328'%3EW%3F%3C/text%3E%3C/svg%3E">
+
+  <!-- Huruf dari Google Fonts. Tanpa internet, browser memakai huruf bawaan. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,400..900;1,400..700&display=swap">
+
+  <link rel="stylesheet" href="css/dasar.css">
+  <link rel="stylesheet" href="css/bagian.css">
+  <link rel="stylesheet" href="css/cetak.css" media="print">
+</head>
+<body>
+  <a class="lewati" href="#konten" onclick="document.getElementById('konten').focus(); return false;">Langsung ke isi</a>
+
+  <header class="kepala">
+    <button type="button" id="tombol-menu" class="tombol-kepala" aria-controls="menu" aria-expanded="false" title="Menu">
+      <span class="ikon-menu" aria-hidden="true"><span></span></span><span class="teks-tombol">Menu</span>
+    </button>
+    <a class="logo" href="#/beranda" aria-label="Wer? Wen? Wem? — ke Beranda">
+      <span class="logo-judul">Wer<span class="tanda">?</span> Wen<span class="tanda">?</span> Wem<span class="tanda">?</span></span>
+      <span class="logo-sub">Nominativ · Akkusativ · Dativ</span>
+    </a>
+    <button type="button" id="tombol-proyektor" class="tombol-kepala" aria-pressed="false">
+      <span class="ikon" aria-hidden="true">📽️</span><span class="teks-tombol">Proyektor</span>
+    </button>
+  </header>
+
+  <div class="tata">
+    <nav id="menu" class="menu" aria-label="Daftar bagian"></nav>
+    <div id="tirai" class="tirai" hidden></div>
+    <main id="konten" tabindex="-1">
+      <noscript><p class="kartu">Website ini memerlukan JavaScript. Aktifkan JavaScript di browser Anda.</p></noscript>
+    </main>
+  </div>
+  <footer class="kaki">Deutsch A1 · Nominativ, Akkusativ, Dativ</footer>
+
+  <!-- Urutan penting: data → inti → bagian → app -->
+  <script src="js/data.js"></script>
+  <script src="js/inti.js"></script>
+  <script src="js/bagian/beranda.js"></script>
+  <script src="js/bagian/grammatik.js"></script>
+  <script src="js/bagian/tabel.js"></script>
+  <script src="js/bagian/adegan.js"></script>
+  <script src="js/bagian/detektif.js"></script>
+  <script src="js/bagian/baukasten.js"></script>
+  <script src="js/bagian/verben.js"></script>
+  <script src="js/bagian/navigator.js"></script>
+  <script src="js/bagian/latihan.js"></script>
+  <script src="js/bagian/kelas.js"></script>
+  <script src="js/bagian/ringkasan.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

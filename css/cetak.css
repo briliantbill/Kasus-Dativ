@@ -1,0 +1,44 @@
+/* =====================================================================
+ * cetak.css — tampilan saat dicetak (dimuat dengan media="print")
+ * Halaman utama untuk dicetak: Bagian 11 "Ringkasan cetak" (A4, 2 kolom).
+ * Halaman lain juga bisa dicetak: menu, tombol, dan audio disembunyikan.
+ * ===================================================================== */
+@page { size: A4; margin: 11mm 12mm; }
+
+html { font-size: 11px !important; }
+html, body { background: #fff !important; }
+body { font-size: 1rem !important; line-height: 1.4; }
+
+/* yang tidak perlu dicetak */
+.kepala, .menu, .tirai, .lewati, .lanjut, .kaki, .suara, .tombol, .lompat,
+.petunjuk, .th-aksi, .beranda-kaki, .dialog-gambar, .bk-cepat, .so-cepat,
+.kt-pintasan, .kt-koreksi, .kt-akhiri, .rk-alat, .ad-aksi, .bk-aksi, .so-ulang,
+.lt-aksi, .dt-aksi, noscript { display: none !important; }
+
+.tata { display: block !important; }
+main { max-width: none !important; padding: 0 !important; margin: 0 !important; }
+.kartu { box-shadow: none !important; break-inside: avoid; border-color: #999; }
+.gpanel[hidden] { display: none !important; }
+
+/* warna gender tetap tercetak */
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+/* animasi: langsung hasil akhir */
+*, *::before, *::after { animation: none !important; transition: none !important; }
+.morf-lama, .lb-hilang, .lb-plus { display: none !important; }
+.morf-baru { max-width: none !important; opacity: 1 !important; }
+.sa-tag, .sa-n { opacity: 1 !important; }
+
+/* ---------- Ringkasan cetak ---------- */
+.halaman-ringkasan .kop-bagian { display: none !important; }
+.halaman-ringkasan .rk { border: 0; padding: 0; box-shadow: none; border-radius: 0; }
+.rk-kop { margin-bottom: 8px; padding-bottom: 5px; }
+.rk-judul { font-size: 1.6rem; }
+.rk-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 9px 14px !important; }
+.rk-blok { break-inside: avoid; page-break-inside: avoid; }
+.rk-blok h2 { font-size: 1.15rem; margin-bottom: 4px; }
+.rk-tabel { font-size: .95rem; }
+.rk-tabel th, .rk-tabel td { padding: 2px 4px; border-color: #999; }
+.rk-verben { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+.badge { border-width: 1.5px; }
+.fr.ber-kasus { padding-top: 1.3em; }
